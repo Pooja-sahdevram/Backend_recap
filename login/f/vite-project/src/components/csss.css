@@ -1,0 +1,53 @@
+.board {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+}
+
+.top {
+  border-top: none;
+}
+
+.bottom {
+  border-bottom: none;
+}
+
+.left {
+  border-left: none;
+}
+
+.right {
+  border-right: none;
+}
+
+.top.left {
+  border-top: none;
+  border-left: none;
+}
+
+.top.right {
+  border-top: none;
+  border-right: none;
+}
+
+.bottom.left {
+  border-bottom: none;
+  border-left: none;
+}
+
+.bottom.right {
+  border-bottom: none;
+  border-right: none;
+}
