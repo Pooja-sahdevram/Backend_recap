@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-black text-white min-h-screen flex items-center justify-center"
+  >
+    <div class="w-full max-w-sm">
+      <form
+        action="/file"
+        method="post"
+        class="bg-gray-800 p-6 rounded-lg shadow-md"
+        enctype="multipart/form-data"
+      >
+        <h2 class="text-xl font-bold mb-4">Upload a File</h2>
+        <div class="mb-4">
+          <label
+            class="block text-gray-400 text-sm font-bold mb-2"
+            for="file-upload"
+          >
+            Choose a file
+          </label>
+          <input
+            class="w-full text-gray-300 px-3 py-2 border border-gray-600 rounded-lg bg-gray-900 focus:outline-none focus:border-blue-500"
+            id="file-upload"
+            type="file"
+            name="avtar"
+            accept=".jpg, .jpeg, .png"
+            required
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >
+            Upload
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

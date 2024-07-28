@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-black text-white">
+    <div class="min-h-screen flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold mb-8">Welcome to the Home Page</h1>
+
+        <label for="username" class="block text-lg mb-2">Username:</label>
+        <form action="/" method="post">
+          <input
+            id="username"
+            type="text"
+            name="username"
+            class="px-4 py-2 rounded-md text-black"
+            placeholder="Enter your username"
+          />
+
+          <div class="mt-8">
+            <img
+              src="<%= filename|| '  /defaultimg.jpg' %>"
+              alt="Placeholder Image"
+              class="rounded-full mx-auto w-full h-full object-cover"
+              onclick="uploadprofile()"
+            />
+          </div>
+
+          <button class="bg-blue-700 m-2 rounded p-2">submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function uploadprofile() {
+        window.location.href = "/file";
+      }
+    </script>
+  </body>
+</html>
